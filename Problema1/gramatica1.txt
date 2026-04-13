@@ -1,0 +1,14 @@
+# ============================================================
+# Gramática 1: Expresiones Aritméticas (vista en clase)
+# ============================================================
+# Justificación: Es la gramática requerida por la actividad.
+# Permite suma (+) y multiplicación (*) con precedencia correcta.
+# Es LL(1) después de eliminar recursión izquierda.
+# Prueba: producciones ε en E' y T', FOLLOW propagado a múltiples NT.
+# ============================================================
+START: E
+E -> T E'
+E' -> + T E' | ε
+T -> F T'
+T' -> * F T' | ε
+F -> ( E ) | id
