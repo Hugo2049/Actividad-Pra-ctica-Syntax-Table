@@ -1,4 +1,4 @@
 START: S
-S -> i E t S A | a
-A -> e S | ε
-E -> b
+S -> A B c
+A -> a A | ε
+B -> b | ε
