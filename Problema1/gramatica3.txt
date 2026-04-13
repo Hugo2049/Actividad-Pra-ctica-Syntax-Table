@@ -1,15 +1,3 @@
-# ============================================================
-# Gramática 3: If-Then-Else (problema del "else colgante")
-# ============================================================
-# Justificación: Demuestra que el programa detecta conflictos
-# en la tabla. Esta gramática NO es LL(1) porque en M[A, e]
-# hay dos producciones posibles:
-#   A -> e S   (asociar el else con el if más cercano)
-#   A -> ε     (no hay else)
-# Esto es el clásico "dangling else" — un problema real que
-# los compiladores deben resolver fuera del análisis LL(1).
-# Símbolos: i=if, t=then, e=else, a=sentencia simple, b=condición
-# ============================================================
 START: S
 S -> i E t S A | a
 A -> e S | ε

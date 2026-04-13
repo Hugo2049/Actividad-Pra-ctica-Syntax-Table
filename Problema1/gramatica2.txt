@@ -1,15 +1,3 @@
-# ============================================================
-# Gramática 2: Gramática con múltiples no terminales anulables
-# ============================================================
-# Justificación: Pone a prueba la Regla 3 del FIRST cuando hay
-# varios símbolos anulables consecutivos en la misma producción.
-# En S -> a B D h, el FIRST de "D h" depende de si D puede ser
-# ε (y D puede serlo porque E y F son opcionales).
-# Pone a prueba la Regla 3 del FOLLOW con propagación en cadena:
-# FOLLOW(C) <- FOLLOW(B) <- FIRST(sufijo de B) <- ...
-# Esta gramática SÍ es LL(1).
-# (Gramática vista en los apuntes de clase)
-# ============================================================
 START: S
 S -> a B D h
 B -> c C
